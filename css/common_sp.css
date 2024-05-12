@@ -1,0 +1,388 @@
+@charset "utf-8";
+/* CSS Document */
+@media screen and (max-width: 960px) {
+	
+}
+
+@media screen and (max-width: 500px) {
+	
+	* {
+		width: 100%;
+		
+	}
+	/* ハンバーガーメニュー */
+	.hamburger {
+		display: block;
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		transition: all 5s;
+		z-index: 20;
+		background-color: #D9BCA3;
+		overflow-x: hidden;
+	}
+
+	.hamburger span {
+		display: block;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 15px;
+		height: 2px;
+		border-radius: 4px;
+		background-color: #0D0D0D;
+		transition: all 0.5s;
+	}
+	.hamburger span:nth-child(1) {
+		top: 9px;
+	}
+	.hamburger span:nth-child(2) {
+		top: 14px;
+	}
+	.hamburger span:nth-child(3) {
+		top: 19px;
+	}
+	.open .hamburger span:nth-child(1), 
+	.open .hamburger span:nth-child(3) {
+		top: 14px;
+	}
+	#navi {
+		display: none;
+		transition: all 1s;
+	}
+	
+	.open #navi {
+		display: block;
+		visibility: visible;
+		
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		
+		background-color: #fff;
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
+		z-index: 20;
+	}
+	
+	.open #navi .nav-menu {
+		flex-direction: column;
+	}
+	
+	.open #navi .nav-menu li {
+		text-align: center;
+		font-weight: bold;
+		padding: 30px;
+	}
+	
+	#mask {
+		display: none;
+		transition: all 3s;
+	}
+	
+	.open #mask {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #593719;
+		opacity: 0.8;
+		z-index: 10;
+	}
+	
+	h3.sec-title {
+		font-size: 24px;
+	}
+
+	.inner {
+		width: 90%;
+		margin: 0 auto;
+		margin-bottom: 80px;
+		
+	}
+
+	/* header */
+	#header {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 50px;
+		padding: 20px 15px;
+	}
+	
+	#header .flex {
+		display: block;
+	}
+	
+	#header .flex img {
+		width: 200px;
+	}
+
+	#mainImage {
+		display: block;
+	}
+	
+	#mainImage .img {
+		width: 100%;
+		height: 100%;
+	}
+
+	#mainImage .img img {
+		position: relative;
+		
+	}
+	
+	#mainImage .text .right{
+		position: absolute;
+		text-align: right;
+		top: 10%;
+		right: 3%;
+	}
+
+	#mainImage .text h2 {
+		font-size: 36px;
+	}
+
+	#mainImage .text p {
+		font-size: 16px;
+	}
+
+	#mainImage .text .items {
+		display: flex;
+		justify-content: center;
+	}
+
+	#mainImage .text .item {
+		margin-right: 30px;
+		width: 130px;
+		height: 130px;
+	}
+
+	#mainImage .text .item p {
+		font-size: 16px;
+		line-height: 30px;
+		width: 130px;
+	} 
+
+	#mainImage .text .item1 span {
+		font-size: 36px;
+	}
+
+	/* 信頼できる実績 */
+	#feature .item {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	#feature .item .text {
+		flex-direction: column;
+		padding: 25px 0;
+		margin-left: 10px;
+	}
+
+	#feature .item .num {
+		font-size: 64px;
+		margin-right: 0px;
+		width: 25%;
+	}
+
+	#feature .item .text h4 {
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	#feature .item .text h4 span {
+		font-size: 24px;
+	}
+
+	#feature .item .text p {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	/* 信頼できる実績おわり */
+
+	/* 将来のシゴト */
+	#cours .item {
+		flex-direction: column;
+		margin-bottom: 60px;
+		align-items: center;
+	}
+	
+	#cours .item .img .circle {
+		left: 8%;
+	}
+	
+	#cours .item .img img {
+		left: 17%;
+	}
+
+	#cours .item .arrow {
+		height: calc(tan(50deg) * 50px / 2);
+		width: 100px;
+		clip-path: polygon(0 0, 100% 0, 50% 100%);
+		margin: 20px 0;
+	}
+	#cours .item .category {
+		width: 100%;
+	}
+
+	/* 将来のシゴトおわり */
+
+	/* 学習の流れ */
+	#flow .item ul {
+		flex-direction: column;
+		margin-bottom: 10px;
+	}
+	
+	#flow .item ul .top {
+		margin-bottom: 5px;
+	}
+	
+	#flow .item ul .top .img {
+		width: 50px;
+		height: 50px;
+		margin-right: 20px;
+	}
+
+	#flow .item ul .top .img img {
+		width: 25px;
+		height: 25px;
+	}
+
+	#flow .item ul .title {
+		line-height: 50px;
+		text-align: left;
+	}
+
+	#flow .item ul .text {
+		width: 100%;
+		padding: 0;
+	}
+
+	#flow .arrow {
+		height: calc(tan(50deg) * 50px / 2);
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+
+	/* 学習の流れおわり */
+
+	/* 卒業生の声 */
+	#voice .item {
+		width: 100%;
+	}
+
+	#voice .item .wrapper {
+		width: 100%;
+	
+	}
+
+	#voice .item .wrapper p {
+		width: 100%;
+	} 
+	
+	#voice .item .wrapper .title {
+		font-size: 10px;
+	}
+
+	#voice .item .wrapper .title span {
+		font-size: 14px;
+	}
+
+	#voice .item .wrapper .text {
+		font-size: 10px;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	#voice .item .offer {
+		font-size: 10px;
+	}
+
+	#voice .imageScroll {
+		width:100%;
+	}
+
+	/* 卒業生の声おわり */
+
+	/* 無料説明会 */
+	#web {
+		position: relative;
+		overflow-y: hidden;
+	}
+
+	#web .flex .img {
+		position: absolute;
+		top: 5%;
+		left: -5%;
+		width: 100px;
+		height: 100px;
+	}
+
+	#web .flex .text {
+		text-align: center;
+		width: 100%;
+	}
+
+	#web .flex .text h4 {
+		font-size: 15px;
+		margin-bottom: 20px;
+	}
+
+	#web .flex .text p {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+	
+	#web .flex .text .cv {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	#web .circle1 {
+		width: 350px;
+		height: 350px;
+		top: 0%;
+		right: 0%;
+	}
+
+	#web .circle2 {
+		width: 300px;
+		height: 300px;
+		top: 90%;
+		left: 15%;
+	}
+
+	#web .circle3 {
+		width: 100px;
+		height: 100px;
+		top: 50%;
+		left: 0%;
+	}
+	/* 無料説明会おわり */
+
+	/* フッター */
+
+	#footer .footerNav {
+		flex-direction: column;
+		margin-bottom: 30px;
+	}
+
+	#footer .footerNav li {
+		margin-bottom: 10px;
+		margin-right: 0;
+	}
+
+	#footer small {
+		font-size: 8px;
+	}
+	/* フッターおわり */
+}
